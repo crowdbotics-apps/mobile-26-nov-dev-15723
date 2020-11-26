@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   View,
   Image,
@@ -8,33 +8,54 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet,
-} from "react-native";
-import DateTimePicker from 'react-native-datepicker';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Slider from '@react-native-community/slider';
-import { CheckBox } from 'react-native-elements';
-import {SlideMenuIcon} from '../../../navigator/slideMenuIcon';
+  StyleSheet
+} from "react-native"
+import DateTimePicker from "react-native-datepicker"
+import Icon from "react-native-vector-icons/FontAwesome"
+import Slider from "@react-native-community/slider"
+import { CheckBox } from "react-native-elements"
+import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 
 export default class Blank extends React.Component {
-  static navigationOptions = ({navigation}) => {
+  static navigationOptions = ({ navigation }) => {
     return {
-      headerLeft: <SlideMenuIcon navigationProps={navigation} />,
-    };
-  };
-  
-  state = {};
+      headerLeft: <SlideMenuIcon navigationProps={navigation} />
+    }
+  }
+
+  state = { CheckBox_4: false }
 
   render = () => (
-    <View style={styles.container}>
-      <Text>This is your new component</Text>
+    <View>
+      <Text>Sample text content</Text>
+      <Text>Sample text content</Text>
+      <CheckBox
+        title=""
+        containerStyle={styles.CheckBox_4}
+        checked={this.state.CheckBox_4}
+        onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
+      />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
-});
+  View_1: {},
+  Text_2: {},
+  Text_3: {},
+  CheckBox_4: {
+    width: 100,
+    marginLeft: 5,
+    marginRight: 10,
+    marginTop: 15,
+    alignSelf: "center",
+    textDecorationLine: "line-through",
+    textTransform: "uppercase",
+    lineHeight: 18,
+    letterSpacing: 19
+  }
+})
