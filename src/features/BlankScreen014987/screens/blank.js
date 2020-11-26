@@ -30,7 +30,7 @@ export default class Blank extends React.Component {
       <Text>Sample text content</Text>
       <Text>Sample text content</Text>
       <CheckBox
-        title=""
+        title="abcd"
         disabled={true}
         containerStyle={styles.CheckBox_4}
         checked={this.state.CheckBox_4}
@@ -57,6 +57,33 @@ const styles = StyleSheet.create({
   Text_2: {},
   Text_3: {},
   CheckBox_4: {
+    width: 100,
+    marginLeft: 5,
+    marginRight: 10,
+    marginTop: 15,
+    alignSelf: "center",
+    textDecorationLine: "line-through",
+    textTransform: "uppercase",
+    lineHeight: 18,
+    letterSpacing: 19
+  },
+
+  View_1: {},
+  Text_2: {},
+  Text_3: {},
+  CheckBox_4: {
+    width: 100,
+    marginLeft: 5,
+    marginRight: 10,
+    marginTop: 15,
+    alignSelf: "center",
+    textDecorationLine: "line-through",
+    textTransform: "uppercase",
+    lineHeight: 18,
+    letterSpacing: 19
+  },
+
+  CheckBox_5: {
     width: 100,
     marginLeft: 5,
     marginRight: 10,
